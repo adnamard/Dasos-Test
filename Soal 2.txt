@@ -1,0 +1,13 @@
+2. Display all product with its category that joined from other tables.
+
+SELECT 
+    Product.id AS product_id,
+    Product.product_name,
+    Product.price,
+    Kategori.category_name
+FROM 
+    Product
+JOIN 
+    SubKategori ON Product.sub_category_id = SubKategori.id
+JOIN 
+    Kategori ON SubKategori.category_id = Kategori.id;

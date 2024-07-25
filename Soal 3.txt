@@ -1,0 +1,12 @@
+def addingnumbers(a, b, n):
+    if n <= 0:
+        return "Angka tidak boleh 0"
+    num = [a, b]
+    while len(num) < n:
+        nextnum = num[-1] + num[-2]
+        num.append(nextnum)
+    
+    return num[:n]
+
+print(addingnumbers(5, 7, 4))
+print(addingnumbers(1, 1, 5))
